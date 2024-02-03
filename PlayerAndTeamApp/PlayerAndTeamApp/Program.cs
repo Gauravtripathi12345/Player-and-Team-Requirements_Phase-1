@@ -74,14 +74,14 @@ namespace PlayerAndTeamApp
 
         public static int RemovePlayerById()
         {
-            Console.WriteLine("Enter the player ID");
+            Console.Write("Enter the player ID to Remove: ");
             int playerId = Convert.ToInt32(Console.ReadLine());
             return playerId;
         }
 
         public static void GetPlayerById(OneDayTeam oneDayTeam)
         {
-            Console.WriteLine("Enter the player ID");
+            Console.Write("Enter the player ID: ");
             int playerId = Convert.ToInt32(Console.ReadLine());
             Player player = oneDayTeam.GetPlayerById(playerId);
             if(player.PlayerId==0 && player.PlayerName == null && player.PlayerAge == 0)
@@ -96,7 +96,7 @@ namespace PlayerAndTeamApp
 
         public static void GetPlayerByName(OneDayTeam oneDayTeam)
         {
-            Console.WriteLine("Enter the player name");
+            Console.Write("Enter the player name: ");
             string playerName = Console.ReadLine();
             // OneDayTeam oneDayTeam = new OneDayTeam();
             Player player = oneDayTeam.GetPlayerByName(playerName);
@@ -120,7 +120,7 @@ namespace PlayerAndTeamApp
 
         public static bool Confirmation()
         {
-            Console.WriteLine("Do you want to Continue (yes/no)?:");
+            Console.Write("Do you want to Continue (yes/no)?:");
             string confirmationResult = Console.ReadLine();
 
             if (confirmationResult == "yes" || confirmationResult == "y" || confirmationResult == "YES" || confirmationResult == "Yes" || confirmationResult == "Y")
